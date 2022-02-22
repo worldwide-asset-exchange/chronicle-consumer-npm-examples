@@ -1,7 +1,5 @@
 'use strict';
 
-const program         = require('commander');
-const ConsumerServer  = require('chronicle-consumer');
 const config          = require('config');
 const { Client }      = require('pg');
 const consumerFactory = require('./lib/consumer');
@@ -27,13 +25,3 @@ function work() {
 }
 
 dbConnect().then(work)
-
-// program
-//     .requiredOption('--contracts [value]', 'Comma-separated list of contracts whose actions are monitored')
-//     .parse(process.argv);
-
-
-// var accountsMap = new Map();
-// program.contracts.split(',').forEach(function(c) {
-//     accountsMap.set(c, true);
-// });
