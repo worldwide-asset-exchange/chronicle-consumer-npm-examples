@@ -1,0 +1,56 @@
+{
+  "dbConfig": {
+    "user": "user",
+    "host": "host",
+    "database": "database",
+    "password": "password",
+    "port": 0000  
+  },
+  "consumer": {
+    "network": "wax",
+    "host": "127.0.0.1",
+    "port": "8855",
+    "ack": 10,
+    "async": false
+  },
+	"contracts" : {
+    "bcbrawlers" : {
+      "gearadd": [],
+      "gearrem": [],
+      "brawleradd": [],
+      "brawlerrem": [],
+      "ringselect": [],
+      "brawl": [],
+      "heal": [],
+      "wdrawbrawler": [],
+      "wdrawbrwl": [],
+      "craft": [],
+      "configset": [],
+      "configclear": [],
+      "maintset": [],
+      "brawlerset": [],
+      "gearset": [],
+      "ringset": [],
+      "ringdset": [],
+      "slotdset": [],
+      "brawlerdel": [],
+      "geardel": [],
+      "ringdel": [],
+      "ringddel": [],
+      "slotddel": [],
+      "recset": [],
+      "recdel": [],
+      "recreqaddnft": [],
+      "recreqaddft": [],
+      "recreqdel": [],
+      "recresadd": [],
+      "recresdel": [],
+      "ruleset": [],
+      "ruledel": [],
+      "ruleitemadd": [],
+      "ruleitemdel": [],
+      "receiverand": [],
+      "logbrawl": []
+    }
+  }
+}

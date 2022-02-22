@@ -1,7 +1,7 @@
 {
-    "name": "chronicle-example-publicdomain",
+    "name": "chronicle-example-token_transfers",
     "version": "0.0.1",
-    "description": "Telos UK Hash-it database with EOSIO Chronicle",
+    "description": "Token transfers processing for EOSIO Chronicle",
     "license": "MIT",
     "author": "cc32d9 (https://github.com/cc32d9)",
     "engines": {
@@ -11,6 +11,7 @@
     "dependencies": {
         "chronicle-consumer": ">= 0.0.2",
         "commander": ">= 4.1.1",
-        "mysql": ">= 2.18.1"
+        "config": "^3.3.7",
+        "pg": "^8.7.3"
     }
 }
