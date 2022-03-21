@@ -4,6 +4,8 @@ const config          = require('config');
 const { Client }      = require('pg');
 const consumerFactory = require('./lib/consumer');
 const dbWriterFactory = require('./lib/dbWriter');
+const statsd_client   = require('./lib/metrics');
+
 
 // connect to DB...
 const client = new Client(config.get(`dbConfig`))
@@ -19,8 +21,8 @@ const dbConnect = async () => {
 };
 
 function work() {
-    const dbWriter = dbWriterFactory(client);
-    const consumer = consumerFactory(config.get(`consumer`), ["bcbrawlers"], dbWriter.write);
+    const dbWriter = dbWriterFactory(client, statsd_client.gauge);
+    const consumer = consumerFactory(config.get(`consumer`), ["bcbrawlers"], dbWriter.write, statsd_client.gauge);
     consumer.init();
 }
 

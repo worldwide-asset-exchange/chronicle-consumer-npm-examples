@@ -12,6 +12,9 @@
         "chronicle-consumer": ">= 0.0.2",
         "commander": ">= 4.1.1",
         "config": "^3.3.7",
-        "pg": "^8.7.3"
+        "pg": "^8.7.3",
+        "statsd-client": "^0.4.5",
+        "eosjs": "^21.0.3",
+        "node-fetch": "^2.6.1"
     }
 }
