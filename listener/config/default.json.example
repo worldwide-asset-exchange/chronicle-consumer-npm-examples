@@ -1,19 +1,25 @@
 {
   "dbConfig": {
-    "user": "user",
-    "host": "host",
-    "database": "database",
-    "password": "password",
-    "port": 0000  
+    "user": "postgres",
+    "host": "localhost",
+    "database": "waxgames",
+    "password": "postgres",
+    "port": 5432  
   },
   "consumer": {
     "network": "wax",
     "host": "127.0.0.1",
     "port": "8855",
     "ack": 10,
-    "async": false
+    "async": false,
+    "rpcPort": "8888"
   },
-	"contracts" : {
+  "statsd": {
+    "host": "localhost",
+    "port": 8125,
+    "prefix": "reporting-chronicle-heartbeat"
+  },
+  "contracts" : {
     "bcbrawlers" : {
       "gearadd": [],
       "gearrem": [],
