@@ -14,7 +14,8 @@ CREATE TYPE bcbrawlers_actions AS ENUM (
   'craftclaim',
   'receiverand',
   'logbrawl',
-  'logheal'    
+  'logheal', 
+  'logcraft'
 );
 
 DROP TABLE IF EXISTS public.bcbrawlers;
