@@ -14,9 +14,11 @@ const dbConnect = async () => {
     try {
         await client.connect()
         console.log("DB Connection Established")
+        statsd_client.gauge('db_connection',1)
     } catch(err) {
         console.error(err);
         throw new Error(`Unable to connect to DB`);
+        statsd_client.gauge('db_connection',0);
     }
 };
 

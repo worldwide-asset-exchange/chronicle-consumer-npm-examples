@@ -20,9 +20,9 @@ CREATE TYPE bcbrawlers_actions AS ENUM (
 
 DROP TABLE IF EXISTS public.bcbrawlers;
 CREATE TABLE public.bcbrawlers (
-        id serial NOT NULL,
+        id bigserial NOT NULL,
         action bcbrawlers_actions,
-        brawler_id int,  
+        brawler_id bigint,  
         gear_id bigint,
         slot_id bigint,
         ring_id bigint,

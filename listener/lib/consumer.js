@@ -1,7 +1,7 @@
 const ConsumerServer  = require('chronicle-consumer');
 const { JsonRpc } = require('eosjs');
 const fetch = require('node-fetch');
-
+const statsd_client   = require('./metrics');
 
 class WaxConsumer {
     constructor(config, contracts, onReadCallback, reportMetricsFn = () => {}) {
@@ -17,7 +17,7 @@ class WaxConsumer {
         this.rpcBlockIntervalId = setInterval(() => {
             this.fetchBlockData();
             const blockGap = this.last_irreversible_block_from_blockchain - this.last_irreversible_block_from_receiver;
-            reportMetricsFn('consumer-block-gap', blockGap);
+            statsd_client.gauge('consumer_block_gap',blockGap);
         }, 1000);
     }
 
